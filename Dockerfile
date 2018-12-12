@@ -1,7 +1,7 @@
 FROM r-base:3.5.0
 
 # Install packages
-RUN apt update && apt install -y pandoc libssl-dev libxml2-dev libcurl4-openssl-dev
+RUN apt update && apt install -y pandoc libssl-dev libxml2-dev libcurl4-openssl-dev python3-pip
 
 # Install R modules
 RUN R -e "install.packages('rjson')" && \
@@ -19,3 +19,4 @@ RUN R -e "install.packages('rjson')" && \
     R -e "install.packages('rlist')" && \
     R -e "install.packages('tictoc')"&& \
     R -e "install.packages('kableExtra')"
+RUN pip3 install awscli
