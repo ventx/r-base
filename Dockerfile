@@ -1,7 +1,14 @@
-FROM r-base:3.5.0
+FROM r-base:3.5.2
+LABEL maintainer="hajo@ventx.de"
 
 # Install packages
-RUN apt update && apt install -y pandoc libssl-dev libxml2-dev libcurl4-openssl-dev python3-pip
+RUN apt-get update && apt-get install -y \
+    pandoc \
+    libssl-dev \
+    libxml2-dev \
+    libcurl4-openssl-dev \
+    python3-pip \
+ && rm -rf /var/lib/apt/lists/*
 
 # Install R modules
 RUN R -e "install.packages('rjson')" && \
