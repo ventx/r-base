@@ -30,7 +30,5 @@ RUN R -e "install.packages('rjson')" && \
     R -e "install.packages('R.utils')"&& \
     R -e "install.packages('kableExtra')"&& \
     R -e "install.packages('openxlsx')"&& \
-    R -e "install.packages('diffobj')"&& \
-    R -e "install.packages('R.utils')"&& \
     R -e "install.packages('reticulate')"
 RUN pip3 install awscli

@@ -6,11 +6,15 @@ Docker r-base image. Added this to the base image:
   + caTools
   + charlatan
   + curl
+  + diffobj
   + httpuv
   + httr
   + kableExtra
+  + reticulate
   + rjson
   + rlist
+  + openxlsx
+  + R.utils
   + rmarkdown
   + shiny
   + tictoc
