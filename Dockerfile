@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libcurl4-openssl-dev \
     python3-pip \
+    python3-numpy \
  && rm -rf /var/lib/apt/lists/*
 
 # Install R modules
@@ -25,5 +26,11 @@ RUN R -e "install.packages('rjson')" && \
     R -e "install.packages('writexl')" && \
     R -e "install.packages('rlist')" && \
     R -e "install.packages('tictoc')"&& \
-    R -e "install.packages('kableExtra')"
+    R -e "install.packages('diffobj')"&& \
+    R -e "install.packages('R.utils')"&& \
+    R -e "install.packages('kableExtra')"&& \
+    R -e "install.packages('openxlsx')"&& \
+    R -e "install.packages('diffobj')"&& \
+    R -e "install.packages('R.utils')"&& \
+    R -e "install.packages('reticulate')"
 RUN pip3 install awscli
